@@ -15,9 +15,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out .
 
-# Expose port 5000 and 5003 (for http/https)
+# Expose port 5000 (for http only)
 EXPOSE 5000
-EXPOSE 5003
 
-ENV ASPNETCORE_URLS=http://+:5000;https://+:5003
+ENV ASPNETCORE_URLS=http://+:5000
 ENTRYPOINT ["dotnet", "POSInventory.dll"]
