@@ -8,6 +8,8 @@ namespace POSInventory.Models
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +29,16 @@ namespace POSInventory.Models
                 .HasKey(i => i.InventoryId);
             modelBuilder.Entity<Inventory>()
                 .HasQueryFilter(i => !i.IsDeleted);
+
+            // Bill
+            modelBuilder.Entity<Bill>()
+                .HasKey(b => b.BillId);
+            modelBuilder.Entity<Bill>()
+                .HasMany(b => b.Items)
+                .WithOne(i => i.Bill)
+                .HasForeignKey(i => i.BillId);
+            modelBuilder.Entity<BillItem>()
+                .HasKey(i => i.BillItemId);
         }
     }
 }

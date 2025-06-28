@@ -20,6 +20,9 @@ builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IBillingRepository, BillingRepository>();
+builder.Services.AddScoped<IBillingService, BillingService>();
+builder.Services.AddScoped<IBillQueryService, BillQueryService>();
 
 // Add CORS policy
 builder.Services.AddCors(options =>
