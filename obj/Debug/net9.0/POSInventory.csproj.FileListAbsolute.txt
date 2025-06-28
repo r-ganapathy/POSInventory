@@ -166,3 +166,9 @@ D:\Github-Copilot\POSInventory\obj\Debug\net9.0\ref\POSInventory.dll
 D:\Github-Copilot\POSInventory\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Github-Copilot\POSInventory\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Github-Copilot\POSInventory\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\web.config
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\appsettings.Development.json
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\appsettings.json
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\POSInventory.deps.json
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\POSInventory.runtimeconfig.json
+D:\Github-Copilot\POSInventory\bin\Debug\net9.0\out\POSInventory.staticwebassets.endpoints.json
