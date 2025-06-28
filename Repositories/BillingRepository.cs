@@ -41,7 +41,10 @@ namespace POSInventory.Repositories
             var query = _context.Bills.Include(b => b.Items).AsQueryable();
             if (!string.IsNullOrWhiteSpace(req.Search))
             {
-                query = query.Where(b => b.Items.Any(i => i.Name.Contains(req.Search)));
+                var search = req.Search.ToLower();
+                query = query.Where(b =>
+                    b.Items.Any(i => i.Name != null && i.Name.ToLower().Contains(search))
+                );
             }
             if (req.FromDate.HasValue)
                 query = query.Where(b => b.CreatedDate >= req.FromDate.Value);
